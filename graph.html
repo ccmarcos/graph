@@ -3,36 +3,58 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
   <script src="go.js"></script>
   <script src="grafo.js"></script>
-
 </head>
 <!--<body onload="goIntro()">-->
 <body onload="goIntro()">
-  <p>Métodos de búsqueda</p>
-  <select name="busqueda">
+  <nav id="nav">
+    <nav>
+  <div class="divs" id="div0">
+  <p class="texto">Métodos de búsqueda
+  <select name="busqueda" id="seleccion" class="entrada">
     <option value="amplitud">Preferente por amplitud</option>
     <option value="profundidad">Preferente por profundidad</option>
     <option value="uniforme">Costo uniforme</option>
     <option value="limitada">Profundida limitada</option>
     <option value="iterativa">Profundidad iterativa</option>
   </select>
+</p>
+</div>
 
-  <p>Estado Inicial
-    <input type="text" placeholder="Edo. Inicial" id="EdoIn"></input>
+  <div class="divs" id="div1">
+    <p class="texto">Estado Inicial
+      <input type="text" placeholder="Edo. Inicial" id="EdoIn" class="entrada"></input>
+    </p>
+  </div>
+
+  <div class="divs" id="div2">
+    <p class="texto">Estado Final
+      <input type="text" placeholder="Edo. Meta" id="EdoFin" class="entrada"></input>
+    </p>
+  </div>
+
+  <div class="divs">
+    <p class="texto">Agregar nodo
+    <input type="button" value="Agregar" class="entrada" id="boton1" onclick="addGraph()">
   </p>
+</div>
 
-  <p>Estado Final
-    <input type="text" placeholder="Edo. Meta" id="EdoFin"></input>
+<div class="divs">
+  <p class="texto">Agregar arista
+
+    <input type="text" placeholder="De" class="entrada" id="primero"></input>
+    <input type="text" placeholder="A" class="entrada" id="segundo"></input>
+    <input type="text" placeholder="Peso" class="entrada" id="tercero"></input>
+    <input type="button" value="Agregar" class="entrada" id="boton2" onclick="addVertice()">
+
   </p>
-
-  <input type="button" value="Add graph" onclick="addGraph()">
-  <input type="text" placeholder="from" id="primero"></input>
-  <input type="text" placeholder="to" id="segundo"></input>
-  <input type="text" placeholder="peso" id="tercero"></input>
-  <input type="button" value="Add Vertice" onclick="addVertice()">
+</div>
+  <div class="divs">
   <div id="myDiagramDiv"></div>
   <input type="button" value="Solve">
-
+</div>
 </boyd>
 </html>

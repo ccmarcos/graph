@@ -23,7 +23,7 @@ function addGraph(){
            fill: "lightblue" }),
        $(go.TextBlock,
          { text: nodo,
-           margin: 5 })
+           margin: 10 })
      );
    diagram.add(nodos[nodo]);
 }
