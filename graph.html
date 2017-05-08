@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+  <script src="go.js"></script>
+  <script src="grafo.js"></script>
+
+</head>
+<!--<body onload="goIntro()">-->
+<body onload="goIntro()">
+  <p>Métodos de búsqueda</p>
+  <select name="busqueda">
+    <option value="amplitud">Preferente por amplitud</option>
+    <option value="profundidad">Preferente por profundidad</option>
+    <option value="uniforme">Costo uniforme</option>
+    <option value="limitada">Profundida limitada</option>
+    <option value="iterativa">Profundidad iterativa</option>
+  </select>
+
+  <p>Estado Inicial
+    <input type="text" placeholder="Edo. Inicial" id="EdoIn"></input>
+  </p>
+
+  <p>Estado Final
+    <input type="text" placeholder="Edo. Meta" id="EdoFin"></input>
+  </p>
+
+  <input type="button" value="Add graph" onclick="addGraph()">
+  <input type="text" placeholder="from" id="primero"></input>
+  <input type="text" placeholder="to" id="segundo"></input>
+  <input type="text" placeholder="peso" id="tercero"></input>
+  <input type="button" value="Add Vertice" onclick="addVertice()">
+  <div id="myDiagramDiv"></div>
+  <input type="button" value="Solve">
+
+</boyd>
+</html>
