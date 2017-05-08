@@ -12,8 +12,37 @@
 <body onload="goIntro()">
   <nav id="nav">
     <nav>
+
+      <div class="divs">
+        <p class="texto">Agregar nodo
+        <input type="text" placeholder="none" class="entrada"disabled ></input>
+        <input type="button" value="Agregar" class="entrada botones" onclick="addGraph()">
+      </p>
+    </div>
+
+    <div class="divs">
+      <p class="texto">Agregar arista
+        <input type="text" placeholder="De" class="entrada" id="primero"></input>
+        <input type="text" placeholder="A" class="entrada" id="segundo"></input>
+        <input type="text" placeholder="Peso" class="entrada" id="tercero"></input>
+        <input type="button" value="Agregar" class="entrada botones" onclick="addVertice()">
+      </p>
+    </div>
+
+    <div class="divs" id="div1">
+      <p class="texto">Estado Inicial
+        <input type="text" placeholder="Edo. Inicial" id="EdoIn" class="entrada"></input>
+      </p>
+    </div>
+
+    <div class="divs" id="div2">
+      <p class="texto">Estado Final
+        <input type="text" placeholder="Edo. Meta" id="EdoFin" class="entrada"></input>
+      </p>
+    </div>
+
   <div class="divs" id="div0">
-  <p class="texto">Métodos de búsqueda
+  <p class="texto">Método de búsqueda
   <select name="busqueda" id="seleccion" class="entrada">
     <option value="amplitud">Preferente por amplitud</option>
     <option value="profundidad">Preferente por profundidad</option>
@@ -23,38 +52,11 @@
   </select>
 </p>
 </div>
-
-  <div class="divs" id="div1">
-    <p class="texto">Estado Inicial
-      <input type="text" placeholder="Edo. Inicial" id="EdoIn" class="entrada"></input>
-    </p>
-  </div>
-
-  <div class="divs" id="div2">
-    <p class="texto">Estado Final
-      <input type="text" placeholder="Edo. Meta" id="EdoFin" class="entrada"></input>
-    </p>
-  </div>
-
-  <div class="divs">
-    <p class="texto">Agregar nodo
-    <input type="button" value="Agregar" class="entrada" id="boton1" onclick="addGraph()">
-  </p>
-</div>
-
-<div class="divs">
-  <p class="texto">Agregar arista
-
-    <input type="text" placeholder="De" class="entrada" id="primero"></input>
-    <input type="text" placeholder="A" class="entrada" id="segundo"></input>
-    <input type="text" placeholder="Peso" class="entrada" id="tercero"></input>
-    <input type="button" value="Agregar" class="entrada" id="boton2" onclick="addVertice()">
-
-  </p>
-</div>
   <div class="divs">
   <div id="myDiagramDiv"></div>
-  <input type="button" value="Solve">
+  <div id="div-solve">
+  <input type="button" value="Solve" id="solve">
+</div>
 </div>
 </boyd>
 </html>
